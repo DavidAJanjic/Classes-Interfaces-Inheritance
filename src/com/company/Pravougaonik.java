@@ -46,10 +46,7 @@ public class Pravougaonik extends Povrs implements Povrsina, Obim, Opisivanje {
     @Override
     public Opisivanje opisivanje() {
         d = Math.sqrt((a * a) + (b * b));
-        Tacka tacka = new Tacka();
-        tacka.setX(a / 2);
-        tacka.setY(b / 2);
-        Krug k = new Krug(tacka,d/2);
+        Krug k = new Krug(getCentar(),d/2);
         return k;
     }
 

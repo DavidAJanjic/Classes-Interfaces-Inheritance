@@ -33,10 +33,7 @@ public class Krug extends Povrs implements Obim, Povrsina, Opisivanje {
     @Override
     public Opisivanje opisivanje() {
         double a = r * 2;
-        Tacka tacka = new Tacka();
-        tacka.setX(r);
-        tacka.setY(r);
-        Kvadrat k1 = new Kvadrat(tacka,a);
+        Kvadrat k1 = new Kvadrat(getCentar(),a);
         return k1;
     }
 

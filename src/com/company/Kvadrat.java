@@ -32,10 +32,7 @@ public class Kvadrat extends Povrs implements Povrsina, Opisivanje, Obim {
     @Override
     public Opisivanje opisivanje() {
         d = Math.sqrt((a * a) + (a * a));
-        Tacka tacka = new Tacka();
-        tacka.setY(a / 2);
-        tacka.setX(a / 2);
-        Krug k = new Krug(tacka, d / 2);
+        Krug k = new Krug(getCentar(), d / 2);
         return k;
     }
 
