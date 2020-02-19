@@ -1,16 +1,16 @@
 package com.company;
 
-public class Kvadrat extends Povrs implements Povrsina,Opisivanje,Obim{
+public class Kvadrat extends Povrs implements Povrsina, Opisivanje, Obim {
     private double a;
-
-
-    public Kvadrat(double a) {
-        this.a = a;
-    }
+    private double d;
 
     public Kvadrat(Tacka centar, double a) {
         super(centar);
         this.a = a;
+    }
+
+    public double getD() {
+        return d;
     }
 
     public double getA() {
@@ -24,28 +24,31 @@ public class Kvadrat extends Povrs implements Povrsina,Opisivanje,Obim{
     @Override
     public double povrsina() {
 
-        double povrsina = a*a;
+        double povrsina = a * a;
         return povrsina;
     }
 
 
     @Override
     public Opisivanje opisivanje() {
-
-        double c = Math.sqrt((a*a)+(a*a));
-        Krug k = new Krug(c/2);
+        d = Math.sqrt((a * a) + (a * a));
+        Tacka tacka = new Tacka();
+        tacka.setY(a / 2);
+        tacka.setX(a / 2);
+        Krug k = new Krug(tacka, d / 2);
         return k;
     }
 
     @Override
     public double obim() {
 
-        double obim = 4*a;
+        double obim = 4 * a;
         return obim;
     }
 
     @Override
     public String toString() {
-        return "Kvadrat povrsine: " + povrsina() + " i stranica a: " + getA() + ".";
+        return "Kvadrat povrsine: " + povrsina() + " i stranica a: " + getA() + " i centra na koordinatama X: " +
+                getCentar().getX() + " i Y: " + getCentar().getY() + ".";
     }
 }

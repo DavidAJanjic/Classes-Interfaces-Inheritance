@@ -4,20 +4,23 @@ public class Main {
 
     public static void main(String args[]) {
 
-        Krug krug = new Krug(5);
 
-        Kvadrat kvadrat = new Kvadrat(4);
 
-        Pravougaonik pravougaonik = new Pravougaonik(3,6);
 
-        Tacka tacka = new Tacka(4,4);
-        Tacka tacka1 = new Tacka(1,1);
+        Tacka tacka = new Tacka(4, 4);
+        Tacka tacka1 = new Tacka(2, 2);
+        Tacka tacka2 = new Tacka(1.5,3);
+
+        Kvadrat kvadrat = new Kvadrat(tacka1, 4);
+        Pravougaonik pravougaonik = new Pravougaonik(tacka2,3, 6);
+        Krug krug = new Krug(tacka, 5);
 
         System.out.println("KRUG");
 
         System.out.println(krug.obim());
         System.out.println(krug.povrsina());
         System.out.println(krug.opisivanje());
+        System.out.println(krug.toString());
 
         System.out.println("\nPRAVOUGAONIK");
 

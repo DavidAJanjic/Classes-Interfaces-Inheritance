@@ -12,6 +12,9 @@ public class Tacka {
         this.y = y;
     }
 
+    public Tacka(final Tacka tacka){
+    }
+
     public double getX() {
         return x;
     }
@@ -28,17 +31,17 @@ public class Tacka {
         this.y = y;
     }
 
-    public double rastojanje(Tacka t){
-        double a = Math.abs(t.getX()-x);
-        double b = Math.abs(t.getY()-y);
+    public double rastojanje(Tacka t) {
+        double a = Math.abs(t.getX() - x);
+        double b = Math.abs(t.getY() - y);
 
 
-        double c = (a*a)+(b*b);
+        double c = (a * a) + (b * b);
         return Math.sqrt(c);
     }
 
     @Override
     public String toString() {
-        return "X: "+ x + " Y " + y;
+        return "X: " + x + " Y: " + y;
     }
 }

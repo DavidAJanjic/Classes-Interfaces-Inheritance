@@ -1,13 +1,7 @@
 package com.company;
 
-public class Krug extends Povrs implements Obim, Povrsina,Opisivanje{
+public class Krug extends Povrs implements Obim, Povrsina, Opisivanje {
     private double r;
-
-
-
-    public Krug(double r) {
-        this.r = r;
-    }
 
     public Krug(Tacka centar, double r) {
         super(centar);
@@ -25,29 +19,31 @@ public class Krug extends Povrs implements Obim, Povrsina,Opisivanje{
     @Override
     public double obim() {
 
-        double obim = 2*r*3.14;
+        double obim = 2 * r * 3.14;
         return obim;
     }
 
     @Override
     public double povrsina() {
 
-        double povrsina = r*r*3.14;
+        double povrsina = r * r * 3.14;
         return povrsina;
     }
 
     @Override
     public Opisivanje opisivanje() {
-        double a = r *2;
-
-        Kvadrat k1 = new Kvadrat(a);
-        return (Opisivanje) k1;
+        double a = r * 2;
+        Tacka tacka = new Tacka();
+        tacka.setX(r);
+        tacka.setY(r);
+        Kvadrat k1 = new Kvadrat(tacka,a);
+        return k1;
     }
 
     @Override
     public String toString() {
         return "Krug{" +
-                "r=" + r +
+                "r=" + r + "; centar =" + getCentar() +
                 '}';
     }
 }

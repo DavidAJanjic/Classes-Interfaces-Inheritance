@@ -1,18 +1,18 @@
 package com.company;
 
-public class Pravougaonik extends Povrs implements Povrsina,Obim,Opisivanje {
+public class Pravougaonik extends Povrs implements Povrsina, Obim, Opisivanje {
     private double a;
     private double b;
-
-    public Pravougaonik(double a, double b) {
-        this.a = a;
-        this.b = b;
-    }
+    private double d;
 
     public Pravougaonik(Tacka centar, double a, double b) {
         super(centar);
         this.a = a;
         this.b = b;
+    }
+
+    public double getD() {
+        return d;
     }
 
     public double getA() {
@@ -33,22 +33,23 @@ public class Pravougaonik extends Povrs implements Povrsina,Obim,Opisivanje {
 
     @Override
     public double povrsina() {
-        double povrsina = a*b;
+        double povrsina = a * b;
         return povrsina;
     }
 
     @Override
     public double obim() {
-        double obim = 2*(a+b);
+        double obim = 2 * (a + b);
         return obim;
     }
 
     @Override
     public Opisivanje opisivanje() {
-
-        double c = Math.sqrt((a*a) + (b*b));
-
-        Krug k = new Krug(c/2);
+        d = Math.sqrt((a * a) + (b * b));
+        Tacka tacka = new Tacka();
+        tacka.setX(a / 2);
+        tacka.setY(b / 2);
+        Krug k = new Krug(tacka,d/2);
         return k;
     }
 

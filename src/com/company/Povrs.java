@@ -4,9 +4,6 @@ public class Povrs {
 
     private Tacka centar;
 
-    public Povrs() {
-    }
-
     public Povrs(Tacka centar) {
         this.centar = centar;
     }
@@ -19,7 +16,7 @@ public class Povrs {
         this.centar = centar;
     }
 
-    public double rastojanjeDoCentra(Povrs p){
+    public double rastojanjeDoCentra(Povrs p) {
         return p.getCentar().rastojanje(centar);
     }
 
