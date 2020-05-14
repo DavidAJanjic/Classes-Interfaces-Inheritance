@@ -1,18 +1,15 @@
 package com.company;
 
-public class Tacka {
+public class Dot {
     private double x;
     private double y;
 
-    public Tacka() {
+    public Dot() {
     }
 
-    public Tacka(double x, double y) {
+    public Dot(double x, double y) {
         this.x = x;
         this.y = y;
-    }
-
-    public Tacka(final Tacka tacka){
     }
 
     public double getX() {
@@ -31,11 +28,9 @@ public class Tacka {
         this.y = y;
     }
 
-    public double rastojanje(Tacka t) {
+    public double distance(Dot t) {
         double a = Math.abs(t.getX() - x);
         double b = Math.abs(t.getY() - y);
-
-
         double c = (a * a) + (b * b);
         return Math.sqrt(c);
     }

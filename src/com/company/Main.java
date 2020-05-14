@@ -5,36 +5,34 @@ public class Main {
     public static void main(String args[]) {
 
 
+        Dot dot = new Dot(4, 4);
+        Dot dot1 = new Dot(2, 2);
+        Dot dot2 = new Dot(1.5,3);
 
+        Square square = new Square(dot1, 4);
+        Rectangle rectangle = new Rectangle(dot2,3, 6);
+        Circle circle = new Circle(dot, 5);
 
-        Tacka tacka = new Tacka(4, 4);
-        Tacka tacka1 = new Tacka(2, 2);
-        Tacka tacka2 = new Tacka(1.5,3);
+        System.out.println("CIRCLE");
 
-        Kvadrat kvadrat = new Kvadrat(tacka1, 4);
-        Pravougaonik pravougaonik = new Pravougaonik(tacka2,3, 6);
-        Krug krug = new Krug(tacka, 5);
+        System.out.println(circle.circumference());
+        System.out.println(circle.surfaceArea());
+        System.out.println(circle.circumscription());
+        System.out.println(circle.toString());
 
-        System.out.println("KRUG");
+        System.out.println("\nRECTANGLE");
 
-        System.out.println(krug.obim());
-        System.out.println(krug.povrsina());
-        System.out.println(krug.opisivanje());
-        System.out.println(krug.toString());
+        System.out.println(rectangle.circumference());
+        System.out.println(rectangle.circumscription());
+        System.out.println(rectangle.surfaceArea());
 
-        System.out.println("\nPRAVOUGAONIK");
+        System.out.println("\nSQUARE");
 
-        System.out.println(pravougaonik.obim());
-        System.out.println(pravougaonik.opisivanje());
-        System.out.println(pravougaonik.povrsina());
+        System.out.println(square.circumscription());
+        System.out.println(square.surfaceArea());
+        System.out.println(square.circumference());
 
-        System.out.println("\nKVADRAT");
-
-        System.out.println(kvadrat.opisivanje());
-        System.out.println(kvadrat.povrsina());
-        System.out.println(kvadrat.obim());
-
-        System.out.println(tacka.rastojanje(tacka1));
+        System.out.println(dot.distance(dot1));
 
 
     }

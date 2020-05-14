@@ -1,11 +1,11 @@
 package com.company;
 
-public class Pravougaonik extends Povrs implements Povrsina, Obim, Opisivanje {
+public class Rectangle extends Surface implements SurfaceArea, Circumference, Circumscription {
     private double a;
     private double b;
     private double d;
 
-    public Pravougaonik(Tacka centar, double a, double b) {
+    public Rectangle(Dot centar, double a, double b) {
         super(centar);
         this.a = a;
         this.b = b;
@@ -32,27 +32,24 @@ public class Pravougaonik extends Povrs implements Povrsina, Obim, Opisivanje {
     }
 
     @Override
-    public double povrsina() {
-        double povrsina = a * b;
-        return povrsina;
+    public double surfaceArea() {
+        return a * b;
     }
 
     @Override
-    public double obim() {
-        double obim = 2 * (a + b);
-        return obim;
+    public double circumference() {
+        return 2 * (a + b);
     }
 
     @Override
-    public Opisivanje opisivanje() {
+    public Circumscription circumscription() {
         d = Math.sqrt((a * a) + (b * b));
-        Krug k = new Krug(getCentar(),d/2);
-        return k;
+        return new Circle(getCenter(),d/2);
     }
 
     @Override
     public String toString() {
-        return "Pravougaonik{" +
+        return "Rectangle {" +
                 "a=" + a +
                 ", b=" + b +
                 '}';
