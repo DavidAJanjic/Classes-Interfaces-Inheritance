@@ -38,6 +38,7 @@ describes the object that surrounds the object that called the method
 (e.g. if the Objectof the class Circle calls the method
 it will return the object of the class Square which surrounds it,
 while the object of class Square will return object of class Circle, etc.).
+
 Test the work of created classes and interfaces in separate class with main method.
 Additionaly, for practice, notice that the Square is a special type of Rectangle(Rectangle with equal width and length).
 Adjust the structure of classes to the fact. Think about implementation of Dot class as static inner class.
