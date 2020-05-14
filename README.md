@@ -1,7 +1,7 @@
 **SERBIAN**
-Zadatak demonstrira rad sa klasama i interfejsima kao i nasledjivanje
 
 Opis koda:
+Zadatak demonstrira rad sa klasama i interfejsima kao i nasledjivanje
 
 Napisati Java konzolnu aplikaciju sa sledećim klasama i interfejsima:
 - Tačka (klasa) – karakterišu je x i y koordinate, kao i metoda rastojanje do druge tačke
